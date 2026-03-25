@@ -157,3 +157,6 @@ To run the tests:
 ```bash
 pytest
 ```
+
+## Chandelier Motion Scheduler
+Source code: https://github.com/dinujaperera93/chandelier
