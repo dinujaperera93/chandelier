@@ -8,7 +8,6 @@ build/
 .venv/
 venv/
 env/
-output/output.csv
 .vscode/
 .DS_Store
 Thumbs.db

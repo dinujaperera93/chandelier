@@ -71,36 +71,14 @@ chandelier/
 ├── main.py               # Entry point
 ├── schedule.csv          # Input: your height targets and timestamps
 ├── output/
-│   └── output.csv        # Output: the smooth transition curve
+│   └── output.csv        # Output: generated when you run main.py
 ├── src/
 │   ├── chandelier.py     # Core logic (parse, compute, simplify, write)
-│   ├── utils.py          # Shared constants (paths, timing, temp folder)
+│   ├── utils.py          # Shared constants (paths, timing)
 │   └── plot.py           # Plots the input schedule and output curve
 ├── tests/
 │   └── test_chandelier.py  # Automated tests covering each function
 └── pyproject.toml        # Project metadata and test configuration
-```
-
----
-
-## How to run it
-
-```bash
-python main.py
-```
-
-The output will be written to `output/output.csv`.
-
-To plot the input schedule and output curve:
-
-```bash
-python src/plot.py
-```
-
-To run the tests:
-
-```bash
-pytest
 ```
 
 ---
@@ -138,3 +116,44 @@ The **red dashed staircase** is the input schedule — each step shows the targe
 The **blue line** is the output curve — the actual motion the chandelier follows, with a short ramp up or down around each scheduled time.
 
 The two curves sit almost on top of each other because the transition periods are very short. For example, a height change of 5 units takes only 5 minutes total,  tiny compared to the hours between schedule entries. If the height changes were much larger, or the schedule entries much closer together, the ramps would be clearly visible and the two curves would separate noticeably.
+
+---
+
+## Requirements
+
+- Python 3.9 or higher
+- matplotlib (installed automatically in the setup step below)
+
+---
+
+## Setup
+
+```bash
+# 1. Create a virtual environment
+python -m venv .venv
+
+# 2. Activate it
+# On Windows:
+.venv\Scripts\activate
+# On macOS/Linux:
+source .venv/bin/activate
+
+# 3. Install the project and its dependencies
+pip install -e .
+```
+
+---
+
+## How to run it
+
+```bash
+python main.py
+```
+
+This writes the output curve to `output/output.csv` and opens the plot automatically.
+
+To run the tests:
+
+```bash
+pytest
+```
