@@ -111,7 +111,7 @@ The chandelier holds at 10, ramps up to 15 over 5 minutes centred on 02:00, hold
 
 ![Chandelier motion curve](output/curve.png)
 
-The **red dashed staircase** is the input schedule each step shows the target height being held until the next entry.
+The **red dashed** is the input schedule each step shows the target height being held until the next entry.
 
 The **blue line** is the output curve, the actual motion the chandelier follows, with a short ramp up or down around each scheduled time.
 
