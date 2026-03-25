@@ -44,11 +44,11 @@ For each pair of consecutive entries, the program works out:
 
 ### 3. Remove redundant points
 
-If three consecutive points already form a straight line, **the middle one is removed** — it adds no information. This keeps the output file clean and minimal without changing the shape of the curve at all.
+If three consecutive points already form a straight line, **the middle one is removed**, it adds no information. This keeps the output file clean and minimal without changing the shape of the curve at all.
 
 ### 4. Write the output (`output/output.csv`)
 
-The result is a new CSV with the full transition curve — ready to be sent to whatever system controls the chandelier.
+The result is a new CSV with the full transition curve, ready to be sent to whatever system controls the chandelier.
 
 ---
 
@@ -56,11 +56,11 @@ The result is a new CSV with the full transition curve — ready to be sent to w
 
 **Bigger move = more time.** The chandelier takes 1 minute per unit of height change. A small change (2 units) takes 2 minutes total; a big change (10 units) takes 10 minutes. This keeps movement looking natural.
 
-**Arrive on time, not late.** The move is split equally before and after the scheduled time. So the chandelier starts moving a little early and finishes a little late — meaning it is exactly at the right height at exactly the right moment.
+**Arrive on time, not late.** The move is split equally before and after the scheduled time. So the chandelier starts moving a little early and finishes a little late meaning it is exactly at the right height at exactly the right moment.
 
 **Stay put at the end.** After the last entry in the schedule, the chandelier holds its final position for one hour. This prevents it drifting if nothing else tells it what to do.
 
-**Keep the output tidy.** If several points in a row happen to form a perfectly straight line, the ones in the middle are removed — they are redundant. The curve looks identical but the file is shorter and easier to read.
+**Keep the output tidy.** If several points in a row happen to form a perfectly straight line, the ones in the middle are removed as they are redundant. The curve looks identical but the file is shorter and easier to read.
 
 ---
 
@@ -111,9 +111,9 @@ The chandelier holds at 10, ramps up to 15 over 5 minutes centred on 02:00, hold
 
 ![Chandelier motion curve](output/curve.png)
 
-The **red dashed staircase** is the input schedule — each step shows the target height being held until the next entry.
+The **red dashed staircase** is the input schedule each step shows the target height being held until the next entry.
 
-The **blue line** is the output curve — the actual motion the chandelier follows, with a short ramp up or down around each scheduled time.
+The **blue line** is the output curve, the actual motion the chandelier follows, with a short ramp up or down around each scheduled time.
 
 The two curves sit almost on top of each other because the transition periods are very short. For example, a height change of 5 units takes only 5 minutes total,  tiny compared to the hours between schedule entries. If the height changes were much larger, or the schedule entries much closer together, the ramps would be clearly visible and the two curves would separate noticeably.
 
@@ -122,7 +122,7 @@ The two curves sit almost on top of each other because the transition periods ar
 ## Requirements
 
 - Python 3.9 or higher
-- matplotlib (installed automatically in the setup step below)
+- matplotlib (installed automatically)
 
 ---
 
