@@ -69,9 +69,9 @@ The result is a new CSV with the full transition curve, ready to be sent to what
 ```
 chandelier/
 ├── main.py               # Entry point
-├── schedule.csv          # Input: your height targets and timestamps
+├── schedule.csv          # Input: height targets and timestamps
 ├── output/
-│   └── output.csv        # Output: generated when you run main.py
+│   └── output.csv        # Output
 ├── src/
 │   ├── chandelier.py     # Core logic (parse, compute, simplify, write)
 │   ├── utils.py          # Shared constants (paths, timing)
